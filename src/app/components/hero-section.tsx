@@ -62,7 +62,7 @@ export function HeroSection({ onExploreClick }: HeroSectionProps) {
             className="mb-4 text-6xl md:text-7xl lg:text-8xl"
             style={{ fontFamily: "'Allura', cursive", color: '#8b6f5e' }}
           >
-            Divine Elegance
+            Anny Jewellery
           </h1>
         </motion.div>
 

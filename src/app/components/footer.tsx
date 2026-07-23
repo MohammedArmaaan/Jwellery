@@ -23,7 +23,7 @@ export function Footer() {
             className="text-5xl md:text-6xl mb-6"
             style={{ fontFamily: "'Allura', cursive", color: '#8b6f5e' }}
           >
-            Divine Elegance
+            Anny Jewellery
           </h2>
           <p 
             className="text-lg leading-relaxed mb-8"
@@ -161,7 +161,7 @@ export function Footer() {
               className="text-sm"
               style={{ fontFamily: "'Poppins', sans-serif", color: '#9e8a85' }}
             >
-              © 2026 Divine Elegance. All rights reserved.
+              © 2026 Anny Jewellery. All rights reserved.
             </p>
 
             <div className="flex items-center gap-4">

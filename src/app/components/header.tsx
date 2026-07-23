@@ -79,7 +79,7 @@ export function Header() {
                 className="text-2xl md:text-3xl tracking-wide"
                 style={{ fontFamily: "'Allura', cursive", color: '#3d2422' }}
               >
-                Divine Elegance
+                Anny Jewellery
               </h1>
             </motion.div>
           </Link>
