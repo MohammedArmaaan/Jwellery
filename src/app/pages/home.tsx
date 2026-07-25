@@ -19,6 +19,7 @@ export function Home() {
 
   return (
     <>
+      <h1 className="sr-only">Anny Jewellery — Premium Jewellery Store | Anny Jewellers — Jwellery Store — Primium Jewellery Store</h1>
       <HeroSection onExploreClick={scrollToCategories} />
       <ScrollytellingSection />
       <FeaturesSection />
