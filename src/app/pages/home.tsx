@@ -7,6 +7,7 @@ import { ProductCard } from "../components/product-card";
 import { TestimonialsSection } from "../components/testimonials-section";
 import { motion } from "motion/react";
 import { allProducts } from "../data";
+// import { SetsCollection } from "./sets-collection";
 
 export function Home() {
   const categoriesRef = useRef<HTMLDivElement>(null);
@@ -21,13 +22,13 @@ export function Home() {
     <>
       <h1 className="sr-only">Anny Jewellery — Premium Jewellery Store | Anny Jewellers — Jwellery Store — Primium Jewellery Store</h1>
       <HeroSection onExploreClick={scrollToCategories} />
-      <ScrollytellingSection />
+      
       <FeaturesSection />
 
       <section className="py-20 md:py-32 bg-gradient-to-b from-[#fef5f5] to-[#f8e8e8]">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-10 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -40,20 +41,21 @@ export function Home() {
               Featured Treasures
             </h2>
             <h3
-              className="text-2xl md:text-3xl mb-4"
+              className="text-xl md:text-3xl mb-4"
               style={{ fontFamily: "'Playfair Display', serif", color: '#3d2422' }}
             >
               Handpicked for You
             </h3>
             <p 
-              className="text-lg max-w-2xl mx-auto"
+              className="text-sm md:text-lg max-w-2xl mx-auto"
               style={{ fontFamily: "'Poppins', sans-serif", color: '#9e8a85' }}
             >
               Discover our most cherished pieces, each telling its own divine story
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {/* YAHAN CHANGE KIYA HAI: grid-cols-2 kiya gaya hai */}
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
             {featuredProducts.map((product, index) => (
               <ProductCard
                 key={product.id}
@@ -68,7 +70,7 @@ export function Home() {
           </div>
         </div>
       </section>
-
+      <ScrollytellingSection />
       <TestimonialsSection />
 
       <div ref={categoriesRef}>

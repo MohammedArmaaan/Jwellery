@@ -1,98 +1,100 @@
 import { motion } from "motion/react";
 import { CategoryCard } from "./category-card";
+import { useNavigate } from "react-router-dom";
+import { SetsCollection } from "../pages/sets-collection";
 
 const categories = [
-  {
-    title: "Nose Pin",
-    image: "https://images.unsplash.com/photo-1664896291033-0509a0adf4f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxub3NlJTIwcGluJTIwamV3ZWxyeXxlbnwxfHx8fDE3NjkzMDg3ODN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-  },
-  {
-    title: "Traditional Nath",
-    image: "https://images.unsplash.com/photo-1740674570372-b82fb1c43478?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB0cmFkaXRpb25hbCUyMGpld2VscnklMjBuYXRofGVufDF8fHx8MTc2OTMwODc4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-  },
-  {
-    title: "Traditional Set",
-    image: "https://images.unsplash.com/photo-1631982690223-8aa4be0a2497?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xkJTIwamV3ZWxyeSUyMGNvbGxlY3Rpb258ZW58MXx8fHwxNzY5MzA4Nzg0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-  },
-  {
-    title: "Diamond Set",
-    image: "https://images.unsplash.com/photo-1762019313711-8b5d1e4f7ba4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWFtb25kJTIwamV3ZWxyeSUyMHNldHxlbnwxfHx8fDE3NjkzMDg3ODN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-  },
-  {
-    title: "Diamond Mangalsutra",
-    image: "https://images.unsplash.com/photo-1767921482419-d2d255b5b700?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG5lY2tsYWNlfGVufDF8fHx8MTc2OTI5MzI2MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-  },
-  {
-    title: "Traditional Mangalsutra",
-    image: "https://images.unsplash.com/photo-1631982690223-8aa4be0a2497?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xkJTIwamV3ZWxyeSUyMGNvbGxlY3Rpb258ZW58MXx8fHwxNzY5MzA4Nzg0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-  },
-  {
-    title: "Diamond Bracelet",
-    image: "https://images.unsplash.com/photo-1763029513623-37d488cb97b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWFtb25kJTIwYnJhY2VsZXQlMjBsdXh1cnl8ZW58MXx8fHwxNzY5MjAyMjY3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-  },
-  {
-    title: "Fancy Earrings",
-    image: "https://images.unsplash.com/photo-1769078595478-5f756986b818?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWFtb25kJTIwZWFycmluZ3MlMjBlbGVnYW50fGVufDF8fHx8MTc2OTMwODc4MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-  },
-  {
-    title: "Traditional Earrings",
-    image: "https://images.unsplash.com/photo-1762686130435-897de4b26aac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGpodW1rYSUyMGVhcnJpbmdzfGVufDF8fHx8MTc2OTMwODc4Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-  },
-  {
-    title: "Jhumkas",
-    image: "https://images.unsplash.com/photo-1762686130435-897de4b26aac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGpodW1rYSUyMGVhcnJpbmdzfGVufDF8fHx8MTc2OTMwODc4Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-  }
+  { title: "NOSEPIN", image: "https://images.unsplash.com/photo-1599643477874-5c36ea280947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "BALI", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "PENDAL", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "TARBUTTI", image: "https://images.unsplash.com/photo-1605100804763-247f67b1544e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "BABY RING", image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "BUTTI", image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "PENDAL SET", image: "https://images.unsplash.com/photo-1599643478514-4668b5952f44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "LADIES RING", image: "https://images.unsplash.com/photo-1535632787350-4e68e0d16c68?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "GENTS RING", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "CHAIN", image: "https://images.unsplash.com/photo-1599643477874-5c36ea280947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "SET", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "ZULA", image: "https://images.unsplash.com/photo-1605100804763-247f67b1544e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "BANGLES", image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "MANGALSUTRA", image: "https://images.unsplash.com/photo-1599643478514-4668b5952f44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "LUCKY", image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "BRACELET", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "KADI JUMMAKI", image: "https://images.unsplash.com/photo-1535632787350-4e68e0d16c68?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "KANCHAIN", image: "https://images.unsplash.com/photo-1599643477874-5c36ea280947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "TIKA & NATH", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "BHUGADI", image: "https://images.unsplash.com/photo-1605100804763-247f67b1544e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "BALL CHAIN", image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" },
+  { title: "VEL KATI", image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" }
 ];
 
 export function CategoriesGrid() {
+  const navigate = useNavigate();
+
+  // 🔥 Slug generator for URLs
+  const generateSlug = (title: string) => 
+    title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-[#f8e8e8] to-[#fef5f5] relative overflow-hidden">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 opacity-5">
+    <section className="py-16 md:py-32 bg-gradient-to-b from-[#f8e8e8] to-[#fef5f5] relative overflow-hidden">
+      {/* Background Decorators */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-64 bg-[#d4a373] rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#e8b4b8] rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-3 md:px-6 relative z-10 pb-[40px] md:pb-[60px]">
+        
+        {/* Header Content */}
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-center mb-10 md:mb-16"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }} // Fast animation (was 0.8)
           viewport={{ once: true }}
         >
           <h2 
-            className="text-5xl md:text-6xl mb-4"
+            className="text-4xl md:text-6xl mb-2 md:mb-4" 
             style={{ fontFamily: "'Allura', cursive", color: '#8b6f5e' }}
           >
             Our Collections
           </h2>
-          <h3
-            className="text-2xl md:text-3xl mb-4"
+          <h3 
+            className="text-xl md:text-3xl mb-2 md:mb-4 px-2" 
             style={{ fontFamily: "'Playfair Display', serif", color: '#3d2422' }}
           >
             Curated for Every Sacred Occasion
           </h3>
           <p 
-            className="text-lg max-w-2xl mx-auto"
+            className="text-sm md:text-lg max-w-2xl mx-auto px-4" 
             style={{ fontFamily: "'Poppins', sans-serif", color: '#9e8a85' }}
           >
             From timeless traditions to contemporary elegance
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* 
+          Grid Layout: 
+          Mobile: grid-cols-2 (2 cards per line), smaller gap (gap-3) 
+          Desktop: grid-cols-3 or 4, larger gap (md:gap-8)
+        */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-8">
           {categories.map((category, index) => (
             <CategoryCard
               key={category.title}
               title={category.title}
               image={category.image}
-              delay={index * 0.1}
-              onClick={() => console.log(`Clicked ${category.title}`)}
+              delay={index * 0.04} // Fast sequential appear (was 0.1)
+              onClick={() => navigate(`/category/${generateSlug(category.title)}`)}
             />
           ))}
         </div>
       </div>
-    </section>
+      
+      {/* Sets Collection Component */}
+      <SetsCollection />
+      
+    </section> 
   );
 }

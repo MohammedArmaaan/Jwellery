@@ -86,8 +86,11 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10">
-            <Link to="/products" className="text-xs font-semibold uppercase tracking-[0.15em] text-[#3d2422] hover:text-[#d4a373] transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <Link to="/category" className="text-xs font-semibold uppercase tracking-[0.15em] text-[#3d2422] hover:text-[#d4a373] transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
               Collections
+            </Link>
+            <Link to="/products" className="text-xs font-semibold uppercase tracking-[0.15em] text-[#3d2422] hover:text-[#d4a373] transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              Products
             </Link>
             <Link to="/services" className="text-xs font-semibold uppercase tracking-[0.15em] text-[#3d2422] hover:text-[#d4a373] transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
               Services
@@ -274,22 +277,22 @@ export function Header() {
             </Link>
 
             {/* User Profile */}
-            <motion.button
+            {/* <motion.button
               className="hidden md:flex w-11 h-11 items-center justify-center rounded-full hover:bg-[#faf8f3] transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <User className="w-5 h-5 text-[#8b6f5e]" strokeWidth={1.5} />
-            </motion.button>
+            </motion.button> */}
 
             {/* Mobile Menu */}
-            <motion.button
+            {/* <motion.button
               className="md:hidden w-11 h-11 flex items-center justify-center rounded-full hover:bg-[#faf8f3] transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <Menu className="w-6 h-6 text-[#8b6f5e]" strokeWidth={1.5} />
-            </motion.button>
+            </motion.button> */}
           </div>
         </div>
       </div>
