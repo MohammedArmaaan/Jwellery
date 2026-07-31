@@ -19,7 +19,7 @@ export function ProductDetail() {
   }, [id]); // Jab bhi product 'id' change hogi, page top par aayega
 
   // WhatsApp Number
-  const WHATSAPP_NUMBER = "919876543210"; 
+  const WHATSAPP_NUMBER = "919624848904"; 
 
   const handleWishlist = () => {
     if (wishlisted) removeFromWishlist(product.id);

@@ -32,7 +32,7 @@ const contactDetails = [
   {
     icon: Phone,
     title: "Call Us",
-    detail: "+91 98765 43210",
+    detail: "+91 96248 48904",
     subDetail: "Mon-Sat, 10 AM - 7 PM"
   },
   {
@@ -77,7 +77,7 @@ export function ContactPage() {
   };
 
   const handleWhatsApp = () => {
-    window.open(`https://wa.me/919876543210?text=Hello%20Anny%20Jewels,%20I%20need%20some%20support.`, '_blank');
+    window.open(`https://wa.me/919624848904?text=Hello%20Anny%20Jewels,%20I%20need%20some%20support.`, '_blank');
   };
 
   return (
