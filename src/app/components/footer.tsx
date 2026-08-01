@@ -110,7 +110,7 @@ export function Footer() {
                 className="text-4xl md:text-5xl mb-3 tracking-wide"
                 style={{ fontFamily: "'Allura', cursive", color: '#8b6f5e' }}
               >
-                Anny Jewellery
+                Anny Jewels
               </h2>
               <p 
                 className="text-sm leading-relaxed"
