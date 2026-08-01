@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import { Layout } from "./components/layout";
-import { SubCategoryGrid } from "./components/sub-category-grid";
 import { CategoriesGrid } from "./components/categories-grid"; 
 import { Home } from "./pages/home";
 import About from "./pages/about";
@@ -9,7 +8,6 @@ import { Cart } from "./pages/cart";
 import { ProductDetail } from "./pages/product-detail";
 import { Products } from "./pages/products";
 import { Services } from "./pages/services";
-import { SetsCollection } from "./pages/sets-collection"; 
 import { Wishlist } from "./pages/wishlist";
 
 // 🔥 New Imports Added Here
@@ -44,18 +42,6 @@ export const router = createBrowserRouter([
         Component: CategoriesGrid, 
       },
       
-      // Special Category Route for "Sets"
-      {
-        path: "category/set",
-        Component: SetsCollection, 
-      },
-
-      // Dynamic Category Route (Nosepin, Bali, etc.)
-      {
-        path: "category/:slug",
-        Component: SubCategoryGrid,
-      },
-
       // User Pages
       {
         path: "cart",
