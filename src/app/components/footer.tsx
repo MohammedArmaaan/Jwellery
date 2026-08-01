@@ -8,12 +8,14 @@ export function Footer() {
     { label: 'Shipping', path: '/policy#shipping' },
     { label: 'Returns', path: '/policy#returns' },
     { label: 'Terms of Service', path: '/policy#terms' },
-    { label: 'Policy', path: '/policy#privacy' }
+    { label: 'Privacy Policy', path: '/policy#privacy' }
   ];
 
   const supportLinks = [
     { label: 'Contact Us', path: '/contact' },
-    { label: 'FAQs', path: '/contact' }
+    { label: 'FAQs', path: '/contact' },
+    { label: 'Track Order', path: '/track' },
+    { label: 'Store Locator', path: '/stores' }
   ];
 
   const trustLinks = [
@@ -24,7 +26,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#f8e8e8] to-[#f0dede] pt-16 pb-8 md:py-20 overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-[#f8e8e8] to-[#f0dede] pt-16 pb-8 overflow-hidden">
       
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
@@ -34,63 +36,107 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Brand Story Section */}
-        <motion.div
-          className="text-center mb-12 md:mb-16 max-w-3xl mx-auto px-2"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h2 
-            className="text-4xl sm:text-5xl md:text-6xl mb-4 md:mb-6 tracking-wide"
-            style={{ fontFamily: "'Allura', cursive", color: '#8b6f5e' }}
-          >
-            Anny Jewellery
-          </h2>
-          <p 
-            className="text-sm md:text-lg leading-relaxed mb-6 md:mb-8"
-            style={{ fontFamily: "'Playfair Display', serif", color: '#3d2422' }}
-          >
-            We believe that jewellery is more than adornment—it's a sacred expression of love, devotion, and heritage. Each piece in our collection is crafted to honor life's most precious moments and timeless traditions.
-          </p>
-          <div className="flex items-center justify-center gap-1">
-            <div className="h-px w-12 md:w-16 bg-gradient-to-r from-transparent to-[#d4a373]" />
-            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#d4a373] rounded-full" />
-            <div className="h-px w-12 md:w-16 bg-gradient-to-l from-transparent to-[#d4a373]" />
-          </div>
-        </motion.div>
+        {/* Main Content Split: Links (Left) and Brand/Subscribe/Social (Right) */}
+        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-8 mb-16">
+          
+          {/* Left Side: Links Grid (3 Columns) */}
+          <div className="w-full lg:w-1/2 grid grid-cols-2 md:grid-cols-3 gap-8">
+            
+            {/* 1st Column: Privacy & Policy */}
+            <div>
+              <h4 
+                className="mb-4 text-sm md:text-base font-bold leading-tight"
+                style={{ fontFamily: "'Playfair Display', serif", color: '#3d2422' }}
+              >
+                Privacy & Policy
+              </h4>
+              <ul className="space-y-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                {policyLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link to={item.path} className="text-sm text-[#9e8a85] hover:text-[#8b6f5e] transition-colors block">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-        {/* Newsletter Section */}
-        <motion.div
-          className="bg-white/60 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-12 mb-12 md:mb-16 shadow-lg border border-white/50"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center max-w-xl mx-auto">
-            <h3 
-              className="text-2xl md:text-3xl mb-2 md:mb-4"
+            {/* 2nd Column: Support */}
+            <div>
+              <h4 
+                className="mb-4 text-sm md:text-base font-bold leading-tight"
+                style={{ fontFamily: "'Playfair Display', serif", color: '#3d2422' }}
+              >
+                Support
+              </h4>
+              <ul className="space-y-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                {supportLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link to={item.path} className="text-sm text-[#9e8a85] hover:text-[#8b6f5e] transition-colors block">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* 3rd Column: Trust */}
+            <div>
+              <h4 
+                className="mb-4 text-sm md:text-base font-bold leading-tight"
+                style={{ fontFamily: "'Playfair Display', serif", color: '#3d2422' }}
+              >
+                Trust
+              </h4>
+              <ul className="space-y-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                {trustLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link to={item.path} className="text-sm text-[#9e8a85] hover:text-[#8b6f5e] transition-colors block">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+
+          {/* Right Side: Brand Story, Subscription & Socials */}
+          <div className="w-full lg:w-1/2 flex flex-col items-start lg:items-end text-left lg:text-right">
+            
+            {/* Brand Name & Paragraph */}
+            <div className="max-w-md mb-8">
+              <h2 
+                className="text-4xl md:text-5xl mb-3 tracking-wide"
+                style={{ fontFamily: "'Allura', cursive", color: '#8b6f5e' }}
+              >
+                Anny Jewellery
+              </h2>
+              <p 
+                className="text-sm leading-relaxed"
+                style={{ fontFamily: "'Playfair Display', serif", color: '#3d2422' }}
+              >
+                We believe that jewellery is more than adornment—it's a sacred expression of love, devotion, and heritage. Each piece in our collection is crafted to honor life's most precious moments and timeless traditions.
+              </p>
+            </div>
+            
+            <p 
+              className="text-sm md:text-base font-medium mb-4"
               style={{ fontFamily: "'Playfair Display', serif", color: '#3d2422' }}
             >
-              Stay Connected
-            </h3>
-            <p 
-              className="text-xs md:text-sm mb-6"
-              style={{ fontFamily: "'Poppins', sans-serif", color: '#9e8a85' }}
-            >
-              Subscribe to receive exclusive offers and new collection updates
+              Sign up to receive exclusive offers and updates
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            
+            {/* Newsletter Input + Button */}
+            <div className="flex w-full flex-col sm:flex-row gap-3 mb-8 justify-end">
               <input
                 type="email"
-                placeholder="Enter your email"
-                className="w-full sm:flex-1 px-5 md:px-6 py-3 md:py-4 rounded-full border border-[#e8b4b8] bg-white/80 focus:outline-none focus:ring-2 focus:ring-[#d4a373] transition-all text-sm md:text-base"
+                placeholder="Your Email Address"
+                className="w-full lg:max-w-sm px-6 py-3 rounded-full border border-[#e8b4b8] bg-white/80 focus:outline-none focus:ring-2 focus:ring-[#d4a373] text-sm md:text-base placeholder-[#9e8a85]"
                 style={{ fontFamily: "'Poppins', sans-serif", color: '#3d2422' }}
               />
               <motion.button
-                className="w-full sm:w-auto px-8 py-3 md:py-4 rounded-full text-white shadow-md hover:shadow-lg transition-all text-sm md:text-base font-medium"
+                className="w-full sm:w-auto px-8 py-3 rounded-full text-white shadow-md hover:shadow-lg transition-all text-sm md:text-base font-medium whitespace-nowrap"
                 style={{
                   fontFamily: "'Poppins', sans-serif",
                   background: 'linear-gradient(135deg, #8b6f5e 0%, #d4a373 100%)'
@@ -101,83 +147,9 @@ export function Footer() {
                 Subscribe
               </motion.button>
             </div>
-          </div>
-        </motion.div>
 
-        {/* Links Grid (Now strictly 3 columns on Mobile) */}
-        <div className="grid grid-cols-3 gap-x-2 md:gap-x-8 gap-y-8 mb-12 md:mb-16 justify-items-start max-w-4xl mx-auto w-full">
-          
-          {/* Privacy & Policy */}
-          <div className="w-full">
-            <h4 
-              className="mb-3 md:mb-4 text-[11px] sm:text-sm md:text-xl font-semibold leading-tight"
-              style={{ fontFamily: "'Playfair Display', serif", color: '#3d2422' }}
-            >
-              Privacy & Policy
-            </h4>
-            <ul className="space-y-1.5 md:space-y-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
-              {policyLinks.map((item) => (
-                <li key={item.label}>
-                  <Link to={item.path} className="text-[9px] sm:text-xs md:text-sm text-[#9e8a85] hover:text-[#8b6f5e] transition-colors block py-0.5 md:py-1">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div className="w-full">
-            <h4 
-              className="mb-3 md:mb-4 text-[11px] sm:text-sm md:text-xl font-semibold leading-tight"
-              style={{ fontFamily: "'Playfair Display', serif", color: '#3d2422' }}
-            >
-              Support
-            </h4>
-            <ul className="space-y-1.5 md:space-y-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
-              {supportLinks.map((item) => (
-                <li key={item.label}>
-                  <Link to={item.path} className="text-[9px] sm:text-xs md:text-sm text-[#9e8a85] hover:text-[#8b6f5e] transition-colors block py-0.5 md:py-1">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Trust */}
-          <div className="w-full">
-            <h4 
-              className="mb-3 md:mb-4 text-[11px] sm:text-sm md:text-xl font-semibold leading-tight"
-              style={{ fontFamily: "'Playfair Display', serif", color: '#3d2422' }}
-            >
-              Trust
-            </h4>
-            <ul className="space-y-1.5 md:space-y-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
-              {trustLinks.map((item) => (
-                <li key={item.label}>
-                  <Link to={item.path} className="text-[9px] sm:text-xs md:text-sm text-[#9e8a85] hover:text-[#8b6f5e] transition-colors block py-0.5 md:py-1">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-        </div>
-
-        {/* Social & Copyright */}
-        <div className="border-t border-[#e8b4b8]/40 pt-6 md:pt-8">
-          <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6">
-            
-            <p 
-              className="text-xs md:text-sm text-center md:text-left"
-              style={{ fontFamily: "'Poppins', sans-serif", color: '#9e8a85' }}
-            >
-              © 2026 Anny jewels. All rights reserved.
-            </p>
-
-            <div className="flex items-center gap-3 md:gap-4">
+            {/* Social Icons */}
+            <div className="flex items-center gap-5 justify-end">
               {[
                 { icon: Instagram, label: "Instagram" },
                 { icon: Facebook, label: "Facebook" },
@@ -187,18 +159,57 @@ export function Footer() {
                 <motion.a
                   key={label}
                   href="#"
-                  className="group w-9 h-9 md:w-11 md:h-11 rounded-full bg-white/80 flex items-center justify-center shadow-sm hover:shadow-md transition-all"
-                  whileHover={{ scale: 1.1, backgroundColor: '#d4a373' }}
+                  className="group flex items-center justify-center transition-all"
+                  whileHover={{ scale: 1.15 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={label}
                 >
-                  <Icon className="w-4 h-4 md:w-5 md:h-5 text-[#8b6f5e] group-hover:text-white transition-colors" />
+                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-[#8b6f5e] hover:text-[#d4a373] transition-colors" />
                 </motion.a>
               ))}
             </div>
-            
+
           </div>
+
         </div>
+
+        {/* Footer Bottom Bar */}
+        <div className="border-t border-[#e8b4b8]/60 pt-6 flex flex-col lg:flex-row justify-between items-center gap-6 text-center lg:text-left">
+          
+          <p 
+            className="text-sm text-[#9e8a85] w-full lg:w-auto"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
+            © 2026 Anny jewels. All rights reserved.
+          </p>
+
+          {/* Designed & Developed Credit */}
+          <p 
+            className="text-sm text-[#9e8a85] w-full lg:w-auto"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
+            Designed and developed with <span className="text-red-500">❤️</span> by{' '}
+            <a 
+              href="https://navgaj.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#8b6f5e] hover:text-[#d4a373] transition-colors font-semibold"
+            >
+              Navgaj TechnoLabs
+            </a>
+          </p>
+
+          <div className="flex items-center justify-center lg:justify-end gap-4 md:gap-6 w-full lg:w-auto" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <Link to="/policy#terms" className="text-xs text-[#9e8a85] hover:text-[#8b6f5e] transition-colors">
+              Terms of Service
+            </Link>
+            <Link to="/policy#privacy" className="text-xs text-[#9e8a85] hover:text-[#8b6f5e] transition-colors">
+              Privacy Policy
+            </Link>
+          </div>
+          
+        </div>
+
       </div>
     </footer>
   );
