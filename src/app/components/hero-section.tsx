@@ -19,10 +19,10 @@ export function HeroSection({ onExploreClick }: HeroSectionProps) {
         <motion.div
           className="absolute inset-0 opacity-40 mix-blend-multiply"
           style={{
-            backgroundImage: `url('/public/Banner/hero.png')`, // Removed /public as bundlers usually serve from public root
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
+  backgroundImage: `url('/Banner/hero.png')`, 
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+}}
           animate={{ y: [0, -15, 0] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
