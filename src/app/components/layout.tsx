@@ -1,10 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { MobileNavigation } from "./mobile-navigation";
 import { Seo } from "./seo";
 
 export function Layout() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.key]);
+
   return (
     <div className="relative min-h-screen flex flex-col overflow-x-hidden" style={{ fontFamily: "'Poppins', sans-serif" }}>
       <Seo />
