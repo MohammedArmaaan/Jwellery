@@ -19,7 +19,7 @@ export function HeroSection({ onExploreClick }: HeroSectionProps) {
         <motion.div
           className="absolute inset-0 opacity-40 mix-blend-multiply"
           style={{
-  backgroundImage: `url('/Banner/hero.png')`, 
+  backgroundImage: `url('/Banner/Hero.png')`, 
   backgroundSize: "cover",
   backgroundPosition: "center",
 }}
