@@ -49,12 +49,10 @@ export function Products() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [activeCategory, activeSubcategory]);
 
-  // 👇 YAHAN NAYA EFFECT ADD KIYA HAI 👇
   // Jab pagination (Next/Prev/Page No) change ho, tab top par scroll karein
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage]);
-  // 👆 -------------------------------- 👆
 
   // Filter Logic
   const filteredProducts = allProducts.filter((product) => {

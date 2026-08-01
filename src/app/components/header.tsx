@@ -72,14 +72,14 @@ export function Header() {
               className="flex items-center gap-3"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#8b6f5e] to-[#d4a373] flex items-center justify-center shadow-md">
+              {/* <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#8b6f5e] to-[#d4a373] flex items-center justify-center shadow-md">
                 <div className="w-6 h-6 border-[1.5px] border-white rounded-full" />
-              </div>
+              </div> */}
               <h1 
                 className="text-2xl md:text-3xl tracking-wide"
                 style={{ fontFamily: "'Allura', cursive", color: '#3d2422' }}
               >
-                Anny Jewellery
+                Anny jewels
               </h1>
             </motion.div>
           </Link>

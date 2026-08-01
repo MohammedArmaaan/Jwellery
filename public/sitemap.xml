@@ -2,8 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://anny-jewellery.vercel.app/</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url><loc>https://anny-jewellery.vercel.app/products</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://anny-jewellery.vercel.app/category</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anny-jewellery.vercel.app/category/set</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anny-jewellery.vercel.app/services</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anny-jewellery.vercel.app/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anny-jewellery.vercel.app/contact</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://anny-jewellery.vercel.app/trust</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://anny-jewellery.vercel.app/policy</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
 </urlset>

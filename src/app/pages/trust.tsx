@@ -91,7 +91,7 @@ export function TrustPage() {
             className="text-4xl md:text-6xl mb-3 md:mb-4 tracking-wide"
             style={{ fontFamily: "'Allura', cursive", color: '#8b6f5e' }}
           >
-            Anny Jewels
+            Anny Jewellery | Anny Jewels
           </h1>
           <h2 
             className="text-2xl md:text-4xl mb-4"

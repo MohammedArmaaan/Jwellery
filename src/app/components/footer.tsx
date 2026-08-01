@@ -174,7 +174,7 @@ export function Footer() {
               className="text-xs md:text-sm text-center md:text-left"
               style={{ fontFamily: "'Poppins', sans-serif", color: '#9e8a85' }}
             >
-              © 2026 Anny Jewellery. All rights reserved.
+              © 2026 Anny jewels. All rights reserved.
             </p>
 
             <div className="flex items-center gap-3 md:gap-4">

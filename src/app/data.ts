@@ -130,7 +130,7 @@ export const allProducts = [
     category: "Nose Rings",
     type: "maharashtrian-nath",
     subcategory: "maharashtrian-nath",
-    description: "A devotional symbol of grace, this heritage bridal nath is adorned with precious gemstones and pearls, completing the quintessential bridal look with Anny Jewellery."
+    description: "A devotional symbol of grace, this heritage bridal nath is adorned with precious gemstones and pearls, completing the quintessential bridal look with Anny jewels."
   },
   {
     id: "4",
