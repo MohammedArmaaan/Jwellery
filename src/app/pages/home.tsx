@@ -6,8 +6,8 @@ import { CategoriesGrid } from "../components/categories-grid";
 import { ProductCard } from "../components/product-card";
 import { TestimonialsSection } from "../components/testimonials-section";
 import { motion } from "motion/react";
-import { allProducts } from "../data";
-// import { SetsCollection } from "./sets-collection";
+// Import categoriesList as well from your data file
+import { allProducts, categoriesList } from "../data"; 
 
 export function Home() {
   const categoriesRef = useRef<HTMLDivElement>(null);
@@ -16,7 +16,15 @@ export function Home() {
     categoriesRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const featuredProducts = allProducts.slice(0, 4);
+  // 1. Get up to the first 4 categories available
+  const top4Categories = categoriesList.slice(0, 4);
+
+  // 2. Map through those 4 categories and grab the SECOND product (index 1) of each. 
+  // If a category only has 1 product, it safely falls back to the first one (index 0).
+  const featuredProducts = top4Categories.map(category => {
+    const productsInCategory = allProducts.filter(product => product.category === category);
+    return productsInCategory.length > 1 ? productsInCategory[1] : productsInCategory[0];
+  });
 
   return (
     <>
@@ -54,7 +62,6 @@ export function Home() {
             </p>
           </motion.div>
 
-          {/* YAHAN CHANGE KIYA HAI: grid-cols-2 kiya gaya hai */}
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
             {featuredProducts.map((product, index) => (
               <ProductCard
@@ -71,11 +78,10 @@ export function Home() {
         </div>
       </section>
       <ScrollytellingSection />
-      <TestimonialsSection />
-
       <div ref={categoriesRef}>
         <CategoriesGrid />
       </div>
+      <TestimonialsSection />     
     </>
   );
 }

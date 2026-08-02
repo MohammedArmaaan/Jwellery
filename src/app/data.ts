@@ -7,7 +7,7 @@ const productCatalog = [
     id: "1",
     name: "Classic Silver Kada Bangle",
     price: 15000,
-    image: "/Products/Bangel1.png", // Extension updated to .png
+    image: "/Products/Bangel1.png", 
     category: "BANGLES",
     metal: "silver",
     type: "daily-wear-bangles",
@@ -18,7 +18,7 @@ const productCatalog = [
     id: "2",
     name: "Twisted Silver Bangle Design",
     price: 16500,
-    image: "/Products/Bangle2.png", // Extension updated to .png
+    image: "/Products/Bangle2.png", 
     category: "BANGLES",
     metal: "silver",
     type: "daily-wear-bangles",
@@ -29,7 +29,7 @@ const productCatalog = [
     id: "3",
     name: "Beaded Silver Bangle Set",
     price: 22000,
-    image: "/Products/Bangles3.png", // Extension updated to .png
+    image: "/Products/Bangles3.png", 
     category: "BANGLES",
     metal: "silver",
     type: "daily-wear-bangles",
@@ -40,7 +40,7 @@ const productCatalog = [
     id: "4",
     name: "Dainty Silver Drop Earrings",
     price: 5500,
-    image: "/Products/Earing1.png", // Extension updated to .png
+    image: "/Products/Earing1.png", 
     category: "EAR RINGS & BUTTI",
     metal: "silver",
     type: "jhumka-butti", 
@@ -51,7 +51,7 @@ const productCatalog = [
     id: "5",
     name: "Emerald-Style Silver Drop Earrings",
     price: 8500,
-    image: "/Products/Earing2.png", // Extension updated to .png
+    image: "/Products/Earing2.png", 
     category: "EAR RINGS & BUTTI",
     metal: "silver",
     type: "diamond-butti", 
@@ -62,7 +62,7 @@ const productCatalog = [
     id: "6",
     name: "Amethyst-Style Silver Earrings",
     price: 9000,
-    image: "/Products/Earing3.png", // Extension updated to .png
+    image: "/Products/Earing3.png", 
     category: "EAR RINGS & BUTTI",
     metal: "silver",
     type: "diamond-butti",
@@ -73,7 +73,7 @@ const productCatalog = [
     id: "7",
     name: "Silver Floral Stud Earrings",
     price: 6500,
-    image: "/Products/Earing4.png", // Extension updated to .png
+    image: "/Products/Earing4.png", 
     category: "EAR RINGS & BUTTI",
     metal: "silver",
     type: "silver-studs",
@@ -82,20 +82,21 @@ const productCatalog = [
   },
   {
     id: "8",
-    name: "Minimalist Silver Pendant Set",
-    price: 12000,
-    image: "/Products/PendentSet1.png", // Extension updated to .png
+    name: "Purple Stone Silver Pendant Set",
+    price: 18000,
+    image: "/Products/PendentSet3.1.png", 
     category: "PENDAL SET",
     metal: "silver",
     type: "silver-pendant-set",
     subcategory: "silver-pendant-set",
-    description: "A refined silver pendant and chain set offering a clean, minimalist look."
+    description: "A gorgeous silver matching pendant and earring set adorned with purple stones."
   },
+  
   {
     id: "9",
     name: "Classic Silver Pendant Set",
     price: 14500,
-    image: "/Products/PendentSet2.png", // Extension updated to .png
+    image: "/Products/PendentSet2.png", 
     category: "PENDAL SET",
     metal: "silver",
     type: "silver-pendant-set",
@@ -106,7 +107,7 @@ const productCatalog = [
     id: "10",
     name: "Elegant Silver Pendant Necklace",
     price: 13500,
-    image: "/Products/PendentSet3.png", // Extension updated to .png
+    image: "/Products/PendentSet3.png", 
     category: "PENDAL SET",
     metal: "silver",
     type: "silver-pendant-set",
@@ -115,15 +116,82 @@ const productCatalog = [
   },
   {
     id: "11",
-    name: "Purple Stone Silver Pendant Set",
-    price: 18000,
-    image: "/Products/PendentSet3.1.png", // Extension updated to .png
+    name: "Minimalist Silver Pendant Set",
+    price: 12000,
+    image: "/Products/PendentSet1.png", 
     category: "PENDAL SET",
     metal: "silver",
     type: "silver-pendant-set",
     subcategory: "silver-pendant-set",
-    description: "A gorgeous silver matching pendant and earring set adorned with purple stones."
-  }
+    description: "A refined silver pendant and chain set offering a clean, minimalist look."
+  },
+  // --- NEW BRACELET PRODUCTS ---
+  {
+    id: "12",
+    name: "Pink Stone Snake Chain Silver Bracelet",
+    price: 8500,
+    image: "/Products/Breslate1.png", 
+    category: "BRACELETS",
+    metal: "silver",
+    type: "silver-bracelet",
+    subcategory: "silver-bracelet",
+    description: "Elegant snake chain silver bracelet featuring a striking pink stone centerpiece."
+  },
+  {
+    id: "13",
+    name: "Emerald Green Stone Silver Bracelet",
+    price: 10500,
+    image: "/Products/Breslate5.png", 
+    category: "BRACELETS",
+    metal: "silver",
+    type: "silver-bracelet",
+    subcategory: "silver-bracelet",
+    description: "A gorgeous silver bracelet featuring vibrant emerald green stone settings."
+  },
+  {
+    id: "14",
+    name: "Multicolor Beaded Silver Bracelet",
+    price: 8000,
+    image: "/Products/Breslate6.png", 
+    category: "BRACELETS",
+    metal: "silver",
+    type: "silver-bracelet",
+    subcategory: "silver-bracelet",
+    description: "A unique and playful silver bracelet featuring purple and green beaded accents."
+  },
+  {
+    id: "15",
+    name: "Classic Cylinder Link Silver Bracelet",
+    price: 7500,
+    image: "/Products/Breslate4.png", 
+    category: "BRACELETS",
+    metal: "silver",
+    type: "silver-bracelet",
+    subcategory: "silver-bracelet",
+    description: "Minimalist and classic silver bracelet crafted with polished cylinder-style links."
+  },
+  {
+    id: "16",
+    name: "Ruby Heart Silver Link Bracelet",
+    price: 11000,
+    image: "/Products/Breslate3.png", 
+    category: "BRACELETS",
+    metal: "silver",
+    type: "silver-bracelet",
+    subcategory: "silver-bracelet",
+    description: "Stunning silver link bracelet adorned with ruby-colored stones and romantic heart motifs."
+  },
+  {
+    id: "17",
+    name: "Geometric Link Silver Bracelet",
+    price: 9200,
+    image: "/Products/Breslate2.png", 
+    category: "BRACELETS",
+    metal: "silver",
+    type: "silver-bracelet",
+    subcategory: "silver-bracelet",
+    description: "Beautiful silver bracelet with intricate geometric links and subtle stone details."
+  },
 ];
 
 export const allProducts = productCatalog.filter((product) => product.image.startsWith("/Products/"));
