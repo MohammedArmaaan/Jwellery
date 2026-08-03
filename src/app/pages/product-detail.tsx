@@ -28,7 +28,7 @@ export function ProductDetail() {
   }, [id]); 
 
   // WhatsApp Number
-  const WHATSAPP_NUMBER = "919624848904"; 
+  const WHATSAPP_NUMBER = "919374613053"; 
 
   const handleWishlist = () => {
     if (wishlisted) removeFromWishlist(product.id);

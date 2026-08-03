@@ -9,7 +9,7 @@ export function Cart() {
   const subtotal = cart.reduce((total, item) => total + item.price, 0);
 
   // WhatsApp Number (Aap apna actual number yaha daal sakte hain)
-  const WHATSAPP_NUMBER = "919624848904";
+  const WHATSAPP_NUMBER = "919374613053";
 
   // Sabhi cart items ko sequence me read karke WhatsApp message generate karne ka function
   const handleWhatsAppInquiry = () => {

@@ -17,7 +17,7 @@ export function ProductCard({ id, name, price, image, category, delay = 0 }: Pro
   const wishlisted = isInWishlist(id);
   const carted = isInCart(id);
 
-  const WHATSAPP_NUMBER = "919624848904"; 
+  const WHATSAPP_NUMBER = "919374613053"; 
 
   const handleWishlist = (e: React.MouseEvent) => {
     e.preventDefault();
