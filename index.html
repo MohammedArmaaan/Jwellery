@@ -2,20 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Google Verification Tag -->
+    <!-- Google Verification Tags -->
     <meta name="google-site-verification" content="T0Q13HLU5BukrURyjF1yHlFPqkHIt_K3ZP4ihyb6p2k" />
     <meta name="google-site-verification" content="B-UckCeWz2ng8F6wF-CAlW7Vw0PkhDKEOez22igNZgE" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <title>Anny Jewellery | Anny Jewels — Premium Jewellery Store</title>
     <meta name="description" content="Anny Jewellery, Anny Jewellers and Anny Jewels — premium jewellery store offering curated luxury rings, necklaces, earrings and bridal jewellery." />
-    <!-- Spelling fixed below: Jewellery & Premium -->
     <meta name="keywords" content="Anny Jewellery, Anny Jewellers, Anny Jewels, Anny jewels, Jewellery Store, Jwellery Store, Premium Jewellery Store, Primium Jewellery Store, Premium Jewellery, Luxury Jewellery" />
     <meta name="robots" content="index, follow" />
     
-    <!-- Use absolute URL for canonical -->
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://anny-jewellery.vercel.app/" />
-    <link rel="icon" href="/logo/Logo1.png" />
+    
+    <!-- Favicon and Touch Icons -->
+    <link rel="icon" href="/logo/Logo1.png" type="image/png" />
     <link rel="apple-touch-icon" href="/logo/Logo1.png" />
     
     <!-- Open Graph for Social Media -->
@@ -24,13 +25,13 @@
     <meta property="og:title" content="Anny Jewellery | Premium Jewellery Store" />
     <meta property="og:description" content="Anny Jewellery, Anny Jewellers and Anny Jewels — premium jewellery store offering curated luxury pieces." />
     <meta property="og:url" content="https://anny-jewellery.vercel.app/" />
-    <meta property="og:image" content="/logo/Logo1.png" />
+    <meta property="og:image" content="https://anny-jewellery.vercel.app/logo/Logo1.png" />
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Anny Jewellery | Anny Jewels — Premium Jewellery Store" />
     <meta name="twitter:description" content="Anny Jewellery, Anny Jewellers and Anny Jewels — premium jewellery store offering curated luxury pieces." />
-    <meta name="twitter:image" content="/og-image.jpg" />
+    <meta name="twitter:image" content="https://anny-jewellery.vercel.app/og-image.jpg" />
     
     <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
   </head>
@@ -38,17 +39,82 @@
   <body>
     <div id="root"></div>
     
-    <!-- Structured data for SEO (Organization / JewelryStore) -->
+    <!-- Structured data for SEO (WebSite, Store, and Products) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "JewelryStore",
-        "name": "Anny Jewellery",
-        "alternateName": ["Anny Jewellers", "Anny Jewels"],
-        "url": "https://anny-jewellery.vercel.app/",
-        "logo": "/logo/Logo1.png",
-        "description": "Anny Jewellery, Anny Jewellers and Anny Jewels — premium jewellery store offering curated luxury pieces including rings, necklaces, and earrings.",
-        "keywords": "Anny Jewellery, Anny Jewellers, Anny Jewels, Jewellery Store, Premium Jewellery Store, Premium Jewellery, Luxury Jewellery"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Anny Jewellery",
+            "alternateName": ["Anny Jewellers", "Anny Jewels"],
+            "url": "https://anny-jewellery.vercel.app/"
+          },
+          {
+            "@type": "JewelryStore",
+            "name": "Anny Jewellery",
+            "url": "https://anny-jewellery.vercel.app/",
+            "logo": "https://anny-jewellery.vercel.app/logo/Logo1.png",
+            "image": "https://anny-jewellery.vercel.app/logo/Logo1.png",
+            "description": "Anny Jewellery, Anny Jewellers and Anny Jewels — premium jewellery store offering curated luxury pieces including rings, necklaces, and earrings."
+          },
+          {
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "Product",
+                  "name": "Complete Silver Ring Assortment",
+                  "image": "https://anny-jewellery.vercel.app/Products/Set1.png",
+                  "description": "A comprehensive collection of beautiful silver rings featuring various stones and designs.",
+                  "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "INR",
+                    "price": "45000",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://anny-jewellery.vercel.app/"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "Product",
+                  "name": "Classic Gold Ring Collection",
+                  "image": "https://anny-jewellery.vercel.app/Products/Set2.png",
+                  "description": "An elegant display set featuring a wide variety of traditional and modern gold rings.",
+                  "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "INR",
+                    "price": "85000",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://anny-jewellery.vercel.app/"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "Product",
+                  "name": "Classic Silver Kada Bangle",
+                  "image": "https://anny-jewellery.vercel.app/Products/Bangel1.png",
+                  "description": "A beautifully crafted pure silver bangle, perfect for everyday elegance.",
+                  "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "INR",
+                    "price": "15000",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://anny-jewellery.vercel.app/"
+                  }
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
     
