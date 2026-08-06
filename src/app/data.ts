@@ -91,7 +91,6 @@ const productCatalog = [
     subcategory: "silver-pendant-set",
     description: "A gorgeous silver matching pendant and earring set adorned with purple stones."
   },
-  
   {
     id: "9",
     name: "Classic Silver Pendant Set",
@@ -192,6 +191,40 @@ const productCatalog = [
     subcategory: "silver-bracelet",
     description: "Beautiful silver bracelet with intricate geometric links and subtle stone details."
   },
+  // --- NEW RING SETS ---
+  {
+    id: "18",
+    name: "Complete Silver Ring Assortment",
+    price: 45000,
+    image: "/Products/Set1.png", 
+    category: "Ring sets",
+    metal: "silver",
+    type: "ring-set",
+    subcategory: "silver-rings",
+    description: "A comprehensive collection of beautiful silver rings featuring various stones and designs."
+  },
+  {
+    id: "19",
+    name: "Classic Gold Ring Collection",
+    price: 85000,
+    image: "/Products/Set2.png", 
+    category: "Ring sets",
+    metal: "gold",
+    type: "ring-set",
+    subcategory: "gold-rings",
+    description: "An elegant display set featuring a wide variety of traditional and modern gold rings."
+  },
+  {
+    id: "20",
+    name: "Premium Gemstone Ring Display",
+    price: 65000,
+    image: "/Products/Set3.png", 
+    category: "Ring sets",
+    metal: "silver",
+    type: "ring-set",
+    subcategory: "gemstone-rings",
+    description: "A luxurious set of elegant rings set with vibrant, colorful gemstones presented in a red velvet box."
+  }
 ];
 
 export const allProducts = productCatalog.filter((product) => product.image.startsWith("/Products/"));

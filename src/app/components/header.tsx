@@ -69,12 +69,14 @@ export function Header() {
           {/* Logo */}
           <Link to="/">
             <motion.div
-              className="flex items-center gap-3"
+              className="flex items-center"
               whileHover={{ scale: 1.02 }}
             >
-              {/* <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#8b6f5e] to-[#d4a373] flex items-center justify-center shadow-md">
-                <div className="w-6 h-6 border-[1.5px] border-white rounded-full" />
-              </div> */}
+              <img
+                src="/logo/WBGLogo1.png"
+                alt="Anny Jewellery logo"
+                className="w-20 h-20 object-contain"
+              />
               <h1 
                 className="text-2xl md:text-3xl tracking-wide"
                 style={{ fontFamily: "'Allura', cursive", color: '#3d2422' }}
